@@ -4,9 +4,20 @@ timeCreated: 18446744011573954816
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Domek_Zwykly02
     4300002: House_Standard_02
-  externalObjects: {}
+    7400000: modo_Anim
+    11100000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House_Standard_02
+    second: {fileID: 2100000, guid: 572087e059ebdfc489dd2ff167dbeee2, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

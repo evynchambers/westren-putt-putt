@@ -4,9 +4,20 @@ timeCreated: 18446744011573954816
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Skrzynia_Box
     4300002: Box_Simple
-  externalObjects: {}
+    7400000: modo_Anim
+    11100000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Box_Simple
+    second: {fileID: 2100000, guid: a8b56353495edc74b827128aa9fbce1d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -4,6 +4,22 @@ timeCreated: 18446744011573954816
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
+    100000: //RootNode
+    100002: Door_L
+    100004: Door_R
+    100006: SmallerPart
+    400000: //RootNode
+    400002: Door_L
+    400004: Door_R
+    400006: SmallerPart
+    2300000: //RootNode
+    2300002: Door_L
+    2300004: Door_R
+    2300006: SmallerPart
+    3300000: //RootNode
+    3300002: Door_L
+    3300004: Door_R
+    3300006: SmallerPart
     4300000: StodolaGR
     4300002: Drzwi_P
     4300004: Drzwi_L
@@ -12,7 +28,14 @@ ModelImporter:
     4300010: Door_R
     4300012: Door_L
     4300014: SmallerPart
-  externalObjects: {}
+    7400000: modo_Anim
+    11100000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Barn_01
+    second: {fileID: 2100000, guid: e7e5c963d45ebe84794f50a2fe5130fc, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

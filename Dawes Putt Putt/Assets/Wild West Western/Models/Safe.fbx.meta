@@ -4,11 +4,26 @@ timeCreated: 18446744011573954816
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
+    100000: Door
+    100002: //RootNode
+    400000: Door
+    400002: //RootNode
+    2300000: Door
+    2300002: //RootNode
+    3300000: Door
+    3300002: //RootNode
     4300000: Sejf _GR
     4300002: Drzwiczki_GR
     4300004: Safe
     4300006: Door
-  externalObjects: {}
+    7400000: modo_Anim
+    11100000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Safe
+    second: {fileID: 2100000, guid: 1b90c15c994b22a44b95004d041364b8, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

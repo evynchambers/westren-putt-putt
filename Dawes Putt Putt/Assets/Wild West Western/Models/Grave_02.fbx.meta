@@ -4,8 +4,19 @@ timeCreated: 18446744011573954816
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Grave_02
-  externalObjects: {}
+    7400000: modo_Anim
+    11100000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grave
+    second: {fileID: 2100000, guid: ba5f45b5dd274aa4d818a882e2bcf231, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

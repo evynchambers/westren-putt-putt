@@ -4,9 +4,20 @@ timeCreated: 18446744011573954816
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: DomekMuminkaGR
     4300002: House_Standard_04
-  externalObjects: {}
+    7400000: modo_Anim
+    11100000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House_Standard_04
+    second: {fileID: 2100000, guid: 94d20daed8199d9459ab7e7754f3233d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

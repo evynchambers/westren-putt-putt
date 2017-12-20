@@ -16,6 +16,11 @@ public class ballcontrol1 : MonoBehaviour {
     private int parTotal;
     private int currentHole;
     public int[] score;
+    public GameObject[] startPos;
+    private bool inHole;
+    public GameObject[] cams;
+    public GameObject[] Hole2Cams;
+   
 
     void addPar()
     {
@@ -28,13 +33,13 @@ public class ballcontrol1 : MonoBehaviour {
     //score[currentHole] = pars[currentHole] - shotsTaken;
 
 	// Use this for initialization
-	void Start () {
-
+	void Start ()
+    {
+        inHole = false;
         isShot = false;
         shotsTaken = 0;
         parTotal = 0;
         currentHole = 0;
-		
 	}
 	
 	// Update is called once per frame
@@ -42,7 +47,7 @@ public class ballcontrol1 : MonoBehaviour {
 
         if(golfBall.velocity == Vector3.zero)
         {
-            if(isShot == true)
+            if(isShot == true && inHole == false)
             {
                 isShot = false;
                 ball.transform.position = transform.position;
@@ -50,14 +55,33 @@ public class ballcontrol1 : MonoBehaviour {
                 arrowObj.transform.parent = ball.transform;
                 golfBall.transform.rotation = ball.transform.rotation;
                 arrowObj.transform.position = transform.position;
-
             }
+
+            if(isShot == true && inHole == true)
+            {
+                //Debug.Log(score[currentHole]);
+                cams[currentHole].SetActive(false);
+                score[currentHole] = pars[currentHole] - shotsTaken;
+                currentHole++;
+                ball.transform.position = startPos[currentHole].transform.position;
+                inHole = false;
+                isShot = false;
+                //ball.transform.position = transform.position;
+                this.transform.position = ball.transform.position;
+                this.transform.parent = ball.transform;
+                arrowObj.transform.parent = ball.transform;
+                golfBall.transform.rotation = ball.transform.rotation;
+                arrowObj.transform.position = transform.position;
+                cams[currentHole].SetActive(true);
+                shotsTaken = 0;
+            }
+
         }
 
         if (Input.GetButtonDown("up") && isShot == false)
         {
             shotsTaken++;
-            Debug.Log(shotsTaken);
+            //Debug.Log(shotsTaken);
             isShot = true;
             ball.transform.DetachChildren();
             //golfBall.AddRelativeForce(0, 0, zforce);
@@ -76,11 +100,13 @@ public class ballcontrol1 : MonoBehaviour {
 
         if (Input.GetKey("a"))
         {
+
             ball.transform.Rotate(0, -1, 0);
            
         }
         if (Input.GetKey("d"))
         {
+            
             ball.transform.Rotate(0, 1, 0);
         }
 
@@ -115,8 +141,23 @@ public class ballcontrol1 : MonoBehaviour {
         {
             //score[currentHole] = pars[currentHole] - shotsTaken;
             Debug.Log("Completed");
-            GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            ;        }
+            inHole = true;
+            //GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
+        if(other.name == "camera trigger")
+        {
+            if (Hole2Cams[0].activeInHierarchy)
+            {
+                Hole2Cams[0].SetActive(false);
+                Hole2Cams[1].SetActive(true);
+            }
+            else
+            {
+                Hole2Cams[1].SetActive(false);
+                Hole2Cams[0].SetActive(true);
+            }
+        }
     }
 }

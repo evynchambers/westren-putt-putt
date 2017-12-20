@@ -4,9 +4,20 @@ timeCreated: 18446744011573954816
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Kopalnia_Konstrukcja
     4300002: Mine_Construction
-  externalObjects: {}
+    7400000: modo_Anim
+    11100000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mine
+    second: {fileID: 2100000, guid: e783501c912e2104da341d6b9e9dd689, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
