@@ -115,8 +115,8 @@ public class ballcontrol1 : MonoBehaviour {
         {
             //score[currentHole] = pars[currentHole] - shotsTaken;
             Debug.Log("Completed");
-            //GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             ;        }
     }
 }
